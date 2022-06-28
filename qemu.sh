@@ -38,7 +38,7 @@ for i in "$@"; do
 	    shift
 	    ;;
     --cdrom=*)
-	    CDROM="-drive file=${i#*=},if=virtio,media=cdrom"
+	    CDROM="-cdrom ${i#*=}"
 	    shift
 	    ;;
     -h|--help)
